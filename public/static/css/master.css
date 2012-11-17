@@ -1,0 +1,26 @@
+body
+{
+    background: #f7f7f7;
+    font-family: Arial, Tahoma, Verdana;
+    font-size: 11pt;
+}
+
+hr
+{
+    height: 0;
+    width: 100%;
+    border: 0;
+    border-top: 1px solid #d6d6d6;
+}
+
+.mainWrapper
+{
+    width: 960px;
+    margin: auto;
+}
+
+.topGreySquare
+{
+    height: 20px;
+    background: #d6d6d6;
+}

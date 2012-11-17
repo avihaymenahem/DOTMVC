@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title><?= $this->view->title ?></title>
+    <link rel="stylesheet" href="<?= utils::getCss('reset') ?>">
+    <link rel="stylesheet" href="<?= utils::getCss('master') ?>">
+    <script src="<?= utils::getJS('jquery') ?>"></script>
+</head>
+<body id="" onload="">
+<div class="mainWrapper">
+    <div class="topGreySquare"></div>
+    <img src="<?= utils::getImage('dotmvc.png') ?>">
+    <hr>
+    <?require $viewPath?>
+</div>
+</body>
+</html>
