@@ -22,10 +22,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Shared.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Shared.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/Shared.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="14" selection-start="1026" selection-end="1026" vertical-scroll-proportion="0.36305732">
+            <state line="45" column="14" selection-start="1026" selection-end="1026" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="38" selection-start="77" selection-end="77" vertical-scroll-proportion="0.025477707">
               <folding />
             </state>
           </provider>
@@ -418,16 +427,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
+    <entry file="file://$PROJECT_DIR$/lib/Shared.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="38" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0">
+        <state line="45" column="14" selection-start="1026" selection-end="1026" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Shared.php">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="14" selection-start="1026" selection-end="1026" vertical-scroll-proportion="0.36305732">
+        <state line="1" column="38" selection-start="77" selection-end="77" vertical-scroll-proportion="0.025477707">
           <folding />
         </state>
       </provider>
