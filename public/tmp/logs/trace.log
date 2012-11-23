@@ -1,0 +1,21 @@
+[2012-11-23 15:24:06] Debug: Cache miss for template default.phtml, reinitialize
+[2012-11-23 15:24:06] Debug: Cache start for default.phtml
+[2012-11-23 15:24:06] Debug: Cache hit for template default.phtml
+[2012-11-23 15:24:07] Debug: Cache hit for template default.phtml
+[2012-11-23 15:30:37] Debug: Cache miss for template default.phtml, reinitialize
+[2012-11-23 15:30:37] Debug: Cache start for default.phtml
+[2012-11-23 15:30:37] Debug: Cache hit for template default.phtml
+[2012-11-23 15:30:58] Debug: Cache hit for template default.phtml
+[2012-11-23 15:30:59] Debug: Cache hit for template default.phtml
+[2012-11-23 15:30:59] Debug: Cache hit for template default.phtml
+[2012-11-23 15:31:00] Debug: Cache hit for template default.phtml
+[2012-11-23 15:31:00] Debug: Cache hit for template default.phtml
+[2012-11-23 15:31:00] Debug: Cache hit for template default.phtml
+[2012-11-23 15:31:11] Debug: Cache hit for template default.phtml
+[2012-11-23 15:31:11] Debug: Cache hit for template default.phtml
+[2012-11-23 15:31:11] Debug: Cache hit for template default.phtml
+[2012-11-23 15:31:12] Debug: Cache hit for template default.phtml
+[2012-11-23 15:31:12] Debug: Cache hit for template default.phtml
+[2012-11-23 15:31:12] Debug: Cache hit for template default.phtml
+[2012-11-23 15:31:24] Debug: Cache miss for template default.phtml, reinitialize
+[2012-11-23 15:31:24] Debug: Cache start for default.phtml

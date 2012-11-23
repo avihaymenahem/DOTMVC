@@ -90,7 +90,17 @@ abstract class BaseController
                 {
                     if(file_exists($layoutPath))
                     {
-                        require_once($layoutPath);
+                        $cache = Cache::getInstance();
+                        if(!$cache->checkFileExist($this->layoutFile, $this->controllerExposed))
+                        {
+                            $cache->init($this->layoutFile, $this->controllerExposed);
+                            require_once($layoutPath);
+                            $cache->setTemplate();
+                        }
+                        else
+                        {
+                            $cache->getTemplate();
+                        }
                     }
                     else
                     {
