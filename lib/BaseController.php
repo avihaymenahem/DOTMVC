@@ -112,7 +112,7 @@ abstract class BaseController
                     }
                     else
                     {
-                        require_once($yield)
+                        require_once($yield);
                     }
                 }
             }
