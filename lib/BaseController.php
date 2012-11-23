@@ -84,10 +84,17 @@ abstract class BaseController
                 {
                     if(file_exists($layoutPath))
                     {
-                        $cache = Cache::getInstance($viewFile, $this->controllerExposed);
-                        $cache->init();
-                        require_once($layoutPath);
-                        $cache->setTemplate();
+                        if(CACHE_ENABLED)
+                        {
+                            $cache = Cache::getInstance($viewFile, $this->controllerExposed);
+                            $cache->init();
+                            require_once($layoutPath);
+                            $cache->setTemplate();
+                        }
+                        else
+                        {
+                            require_once($layoutPath);
+                        }
                     }
                     else
                     {
@@ -96,10 +103,17 @@ abstract class BaseController
                 }
                 else
                 {
-                    $cache = Cache::getInstance($viewFile, $this->controllerExposed);
-                    $cache->init();
-                    require_once($yield);
-                    $cache->setTemplate();
+                    if(CACHE_ENABLED)
+                    {
+                        $cache = Cache::getInstance($viewFile, $this->controllerExposed);
+                        $cache->init();
+                        require_once($yield);
+                        $cache->setTemplate();
+                    }
+                    else
+                    {
+                        require_once($yield)
+                    }
                 }
             }
             else
@@ -110,11 +124,19 @@ abstract class BaseController
     }
 
     /**
-     * Disable view for functions that procces information only
+     * Disable view - for functions that procces information only
      */
     public function disableView()
     {
         $this->displayView = false;
+    }
+
+    /**
+     * Enable view - DEFAULT
+     */
+    public function enableView()
+    {
+        $this->displayView = true;
     }
 
     /**
