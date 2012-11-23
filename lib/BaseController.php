@@ -74,33 +74,20 @@ abstract class BaseController
         if($this->displayView)
         {
             $viewPath = ROOT . DS . 'application' . DS . 'views' . DS . $this->controllerExposed. DS;
-            if(isset($this->otherViewFile))
-            {
-                $viewPath .= $this->otherViewFile;
-            }
-            else
-            {
-                $viewPath .= $this->action . '.phtml';
-            }
+            $viewFile = isset($this->otherViewFile) ? $this->otherViewFile : $this->action . '.phtml';
+            $yield = $viewPath . $viewFile;
 
-            if(file_exists($viewPath))
+            if(file_exists($yield))
             {
                 $layoutPath = ROOT . DS . 'application' . DS . 'views' . DS . 'layout' . DS . $this->layoutFile;
                 if($this->displayLayout)
                 {
                     if(file_exists($layoutPath))
                     {
-                        $cache = Cache::getInstance();
-                        if(!$cache->checkFileExist($this->layoutFile, $this->controllerExposed))
-                        {
-                            $cache->init($this->layoutFile, $this->controllerExposed);
-                            require_once($layoutPath);
-                            $cache->setTemplate();
-                        }
-                        else
-                        {
-                            $cache->getTemplate();
-                        }
+                        $cache = Cache::getInstance($viewFile, $this->controllerExposed);
+                        $cache->init();
+                        require_once($layoutPath);
+                        $cache->setTemplate();
                     }
                     else
                     {
@@ -109,13 +96,15 @@ abstract class BaseController
                 }
                 else
                 {
-                    require_once($viewPath);
-                    return;
+                    $cache = Cache::getInstance($viewFile, $this->controllerExposed);
+                    $cache->init();
+                    require_once($yield);
+                    $cache->setTemplate();
                 }
             }
             else
             {
-                throw new Exception("No View File Found In: " . $viewPath);
+                throw new Exception("No View File Found In: " . $yield);
             }
         }
     }

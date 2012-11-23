@@ -22,10 +22,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="BaseController.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="BaseController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/BaseController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="101" column="50" selection-start="2978" selection-end="2978" vertical-scroll-proportion="0.6369427">
+            <state line="77" column="42" selection-start="2101" selection-end="2101" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="trace.log" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/tmp/logs/trace.log">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="error.log" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/tmp/logs/error.log">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="default.phtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/layout/default.phtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="7" selection-start="538" selection-end="538" vertical-scroll-proportion="-10.88">
               <folding />
             </state>
           </provider>
@@ -34,25 +61,7 @@
       <file leaf-file-name="Cache.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/Cache.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="12" selection-start="618" selection-end="618" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="trace.log" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/tmp/logs/trace.log">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="0" selection-start="1138" selection-end="1138" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="default.ini" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/default.ini">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="10" selection-start="328" selection-end="338" vertical-scroll-proportion="0.0">
+            <state line="64" column="32" selection-start="1620" selection-end="1620" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -73,7 +82,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/public/index.php" />
         <option value="$PROJECT_DIR$/lib/AbstractDAO.php" />
         <option value="$PROJECT_DIR$/lib/Bootstrap.php" />
         <option value="$PROJECT_DIR$/lib/ExceptionController.php" />
@@ -87,8 +95,9 @@
         <option value="$PROJECT_DIR$/application/controllers/IndexController.php" />
         <option value="$PROJECT_DIR$/config/default.ini" />
         <option value="$PROJECT_DIR$/lib/Cache.php" />
-        <option value="$PROJECT_DIR$/public/tmp/logs/trace.log" />
         <option value="$PROJECT_DIR$/lib/BaseController.php" />
+        <option value="$PROJECT_DIR$/application/views/layout/default.phtml" />
+        <option value="$PROJECT_DIR$/public/tmp/logs/trace.log" />
       </list>
     </option>
   </component>
@@ -244,6 +253,50 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="newmvc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="newmvc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="newmvc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="newmvc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="index" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -459,31 +512,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/MasterDAO.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="20" selection-start="376" selection-end="376" vertical-scroll-proportion="0.53503186" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Router.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="108" column="26" selection-start="3000" selection-end="3000" vertical-scroll-proportion="0.7398374" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/index/news.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="12" selection-start="12" selection-end="12" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Session.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="14" selection-start="779" selection-end="779" vertical-scroll-proportion="1.2484076" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Utils.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="21" selection-start="2024" selection-end="2024" vertical-scroll-proportion="0.94796747" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="0" selection-start="6" selection-end="6" vertical-scroll-proportion="0.025477707" />
@@ -504,45 +532,82 @@
         <state line="55" column="24" selection-start="1026" selection-end="1216" vertical-scroll-proportion="0.79617834" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/IndexController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="193" selection-end="193" vertical-scroll-proportion="0.3566879" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/Trace.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="84" selection-start="341" selection-end="341" vertical-scroll-proportion="0.25477707" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/default.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="10" selection-start="328" selection-end="338" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/tmp/logs/trace.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="1138" selection-end="1138" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Cache.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="12" selection-start="618" selection-end="618" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/tmp/cache/1a463e5cc9f5e94b1b7c5e21a73049c8_index_default.phtml.tmp">
+    <entry file="file://$PROJECT_DIR$/application/views/index/index.phtml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/index/news.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="12" selection-start="12" selection-end="12" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/default.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="17" selection-start="345" selection-end="345" vertical-scroll-proportion="0.3566879">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/IndexController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="0" selection-start="193" selection-end="193" vertical-scroll-proportion="0.3566879">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/tmp/cache/36a26b754ceca105d6e6be92bc3465ac_index_index.tmp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/tmp/cache/1d4162dd592d91e93db90adf01c43842_index_news.tmp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Cache.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="32" selection-start="1620" selection-end="1620" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/BaseController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="101" column="50" selection-start="2978" selection-end="2978" vertical-scroll-proportion="0.6369427">
+        <state line="77" column="42" selection-start="2101" selection-end="2101" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/layout/default.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="7" selection-start="538" selection-end="538" vertical-scroll-proportion="-10.88">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/tmp/logs/error.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/tmp/logs/trace.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
