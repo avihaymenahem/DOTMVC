@@ -48,7 +48,7 @@ class BaseView extends stdClass
                 $htmlOutput = $this->getFile();
             }
 
-            echo $htmlOutput;
+            echo Utils::minifyHTML($htmlOutput);
             exit;
         }
         else
