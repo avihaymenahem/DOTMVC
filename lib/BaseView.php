@@ -12,6 +12,10 @@ class BaseView extends stdClass
     public $content;
     public $title;
 
+    /**
+     * @static
+     * @return BaseView
+     */
     public static function getInstance()
     {
         if(!self::$instance)
@@ -34,7 +38,7 @@ class BaseView extends stdClass
         {
             if(CACHE_ENABLED)
             {
-                $cache = Cache::getInstance($this->viewFileName, $this->controllerName);
+                $cache = OutputCache::getInstance($this->viewFileName, $this->controllerName);
                 $htmlOutput = $cache->getTemplate();
                 if($cache->fileIsOld() || !$htmlOutput)
                 {
