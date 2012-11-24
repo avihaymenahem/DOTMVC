@@ -13,3 +13,14 @@
 [2012-11-24 00:20:45] Debug: Cache miss for index.phtml
 [2012-11-24 00:21:03] Debug: Cache hit for template index.phtml
 [2012-11-24 00:26:25] Debug: Cache miss for index.phtml
+[2012-11-24 00:31:22] Debug: Cache miss for index.phtml
+[2012-11-24 00:31:24] Debug: Cache miss for news.phtml
+[2012-11-24 00:31:25] Debug: Cache hit for template news.phtml
+[2012-11-24 00:31:26] Debug: Cache hit for template news.phtml
+[2012-11-24 00:31:26] Debug: Cache hit for template news.phtml
+[2012-11-24 00:31:26] Debug: Cache hit for template news.phtml
+[2012-11-24 00:31:27] Debug: Cache hit for template news.phtml
+[2012-11-24 00:56:14] Debug: Cache hit for template index.phtml
+[2012-11-24 00:56:14] Debug: Cache miss for index.phtml
+[2012-11-24 00:56:17] Debug: Cache hit for template index.phtml
+[2012-11-24 00:56:35] Debug: Cache hit for template index.phtml

@@ -75,7 +75,8 @@ class Utils
      */
     public static function getCss($fileName)
     {
-        return 'http://' . $_SERVER["SERVER_NAME"] . DS . 'public' . DS . 'static' . DS . 'css' . DS . $fileName . '.css?' . time();
+        $extension = ENABLE_MINIFY ? 'min/f=' : '';
+        return 'http://' . $_SERVER["SERVER_NAME"] . DS . $extension . 'public' . DS . 'static' . DS . 'css' . DS . $fileName . '.css?' . time();
     }
 
     /**
@@ -85,21 +86,14 @@ class Utils
      */
     public static function getJS($fileName)
     {
-        return 'http://' . $_SERVER["SERVER_NAME"] . DS . 'public' . DS . 'static' . DS . 'js' . DS . $fileName . '.js?' . time();
+        $extension = ENABLE_MINIFY ? 'min/f=' : '';
+        return 'http://' . $_SERVER["SERVER_NAME"] . DS . $extension . 'public' . DS . 'static' . DS . 'js' . DS . $fileName . '.js?' . time();
     }
 
     public static function minifyHTML($content)
     {
-        $search = array(
-            '/\>[^\S ]+/s', //strip whitespaces after tags, except space
-            '/[^\S ]+\</s', //strip whitespaces before tags, except space
-            '/(\s)+/s'  // shorten multiple whitespace sequences
-        );
-        $replace = array(
-            '>',
-            '<',
-            '\\1'
-        );
+        $search = array('/\>[^\S ]+/s','/[^\S ]+\</s','/(\s)+/s');
+        $replace = array('>','<','\\1');
         $buffer = preg_replace($search, $replace, $content);
         return $buffer;
     }
