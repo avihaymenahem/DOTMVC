@@ -65,7 +65,7 @@ class Utils
      */
     public static function getImage($imagePath)
     {
-        return 'http://' . $_SERVER["SERVER_NAME"] . DS . 'public' . DS . 'static' . DS . 'img' . DS . $imagePath;
+        return BASE_URL . 'public' . DS . 'static' . DS . 'img' . DS . $imagePath;
     }
 
     /**
@@ -76,7 +76,7 @@ class Utils
     public static function getCss($fileName)
     {
         $extension = ENABLE_MINIFY ? 'min/f=' : '';
-        return 'http://' . $_SERVER["SERVER_NAME"] . DS . $extension . 'public' . DS . 'static' . DS . 'css' . DS . $fileName . '.css?' . time();
+        return BASE_URL . $extension . 'public' . DS . 'static' . DS . 'css' . DS . $fileName . '.css?' . time();
     }
 
     /**
@@ -87,7 +87,7 @@ class Utils
     public static function getJS($fileName)
     {
         $extension = ENABLE_MINIFY ? 'min/f=' : '';
-        return 'http://' . $_SERVER["SERVER_NAME"] . DS . $extension . 'public' . DS . 'static' . DS . 'js' . DS . $fileName . '.js?' . time();
+        return BASE_URL . $extension . 'public' . DS . 'static' . DS . 'js' . DS . $fileName . '.js?' . time();
     }
 
     public static function minifyHTML($content)
