@@ -55,7 +55,7 @@ class Minify
                 break;
         }
 
-        $newFileName = time() . '_' . $fileNames . '.min.' . $type;
+        $newFileName = $fileNames . '.min.' . $type;
         $newFilePath .= $newFileName;
         $filePathForReturn = BASE_URL . 'public' . DS . 'tmp' . DS . 'outputCache' . DS . $newFileName;
         $fh = fopen($newFilePath, 'w');
