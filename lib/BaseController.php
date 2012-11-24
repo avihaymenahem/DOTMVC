@@ -52,6 +52,7 @@ abstract class BaseController
         $this->view->setTitle(DEFAULT_PAGE_TITLE);
         $this->view->setController($this->controllerExposed);
         $this->view->setView($this->action . '.phtml');
+        $this->view->setRequestParams($this->params);
     }
 
     /**

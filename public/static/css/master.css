@@ -19,8 +19,19 @@ hr
     margin: auto;
 }
 
+.mainWrapper .content
+{
+    min-height: 400px;
+}
+
 .topGreySquare
 {
     height: 20px;
     background: #d6d6d6;
+}
+
+.footer
+{
+    font-size: 8pt;
+    text-align: center;
 }

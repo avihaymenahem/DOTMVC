@@ -9,6 +9,7 @@ class BaseView extends stdClass
     private $layoutFilePath;
     private $layoutFileName;
     private $controllerName;
+    private $requestParams;
     public $content;
     public $title;
 
@@ -91,7 +92,7 @@ class BaseView extends stdClass
     public function setLayout($file)
     {
         $this->layoutFileName = $file;
-        $this->layoutFilePath = ROOT . DS . 'application' . DS . 'views' . DS . 'layout' . DS . $file;
+        $this->layoutFilePath = ROOT . DS . 'application' . DS . 'layout' . DS . $file;
     }
 
     public function isViewExist() { return file_exists($this->viewFilePath); }
@@ -100,6 +101,9 @@ class BaseView extends stdClass
         $this->viewFileName = $tpl;
         $this->viewFilePath = ROOT . DS . 'application' . DS . 'views' . DS . $this->controllerName . DS . $this->viewFileName;
     }
+
+    public function setRequestParams($params) { $this->requestParams = $params; }
+    public function getRequestParams() { return $this->requestParams; }
 
     public function setTitle($title) { $this->title = $title; }
     public function assign($key, $value) { $this->$key = $value; }
