@@ -68,28 +68,6 @@ class Utils
         return BASE_URL . 'public' . DS . 'static' . DS . 'img' . DS . $imagePath;
     }
 
-    /**
-     * @static
-     * @param $fileName
-     * @return string
-     */
-    public static function getCss($fileName)
-    {
-        $extension = ENABLE_MINIFY ? 'min/f=' : '';
-        return BASE_URL . $extension . 'public' . DS . 'static' . DS . 'css' . DS . $fileName . '.css?' . time();
-    }
-
-    /**
-     * @static
-     * @param $fileName
-     * @return string
-     */
-    public static function getJS($fileName)
-    {
-        $extension = ENABLE_MINIFY ? 'min/f=' : '';
-        return BASE_URL . $extension . 'public' . DS . 'static' . DS . 'js' . DS . $fileName . '.js?' . time();
-    }
-
     public static function minifyHTML($content)
     {
         $search = array('/\>[^\S ]+/s','/[^\S ]+\</s','/(\s)+/s');

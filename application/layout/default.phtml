@@ -3,14 +3,13 @@
 <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <title><?= $this->title ?></title>
-    <link rel="stylesheet" href="<?= utils::getCss('reset') ?>">
-    <link rel="stylesheet" href="<?= utils::getCss('master') ?>">
-    <script src="<?= utils::getJS('jquery') ?>"></script>
+    <link rel="stylesheet" href="<?= Minify::css(array('reset', 'master')) ?>">
+    <script src="<?= Minify::js('jquery') ?>"></script>
 </head>
 <body id="" onload="">
 <div class="mainWrapper">
     <div class="topGreySquare"></div>
-    <img src="<?= utils::getImage('dotmvc.png') ?>">
+    <img src="<?= utils::getImage('dotmvc.png') ?>" height="124px" width="308px">
     <hr>
     <div class="content">
         <?= $this->content; ?>
