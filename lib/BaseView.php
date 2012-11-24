@@ -4,7 +4,6 @@ class BaseView extends stdClass
 {
     private static $instance;
     private $isLayoutEnabled;
-    private $isViewEnabled;
     private $viewFilePath;
     private $viewFileName;
     private $layoutFilePath;
@@ -27,45 +26,34 @@ class BaseView extends stdClass
     {
         $this->setLayout('default.phtml');
         $this->enableLayout();
-        $this->enableView();
     }
 
     public function render()
     {
-        if($this->isViewEnabled())
+        if($this->isViewExist())
         {
-            if($this->isViewExist())
+            if(CACHE_ENABLED)
             {
-                if($this->isViewEnabled())
+                $cache = Cache::getInstance($this->viewFileName, $this->controllerName);
+                $htmlOutput = $cache->getTemplate();
+                if($cache->fileIsOld() || !$htmlOutput)
                 {
-                    if(CACHE_ENABLED)
-                    {
-                        $cache = Cache::getInstance($this->viewFileName, $this->controllerName);
-                        $htmlOutput = $cache->getTemplate();
-                        if($cache->fileIsOld() || !$htmlOutput)
-                        {
-                            ob_start();
-                            echo $this->getFile();
-                            $htmlOutput = $cache->setTemplate();
-                        }
-                    }
-                    else
-                    {
-                        $htmlOutput = $this->getFile();
-                    }
-
-                    echo $htmlOutput;
-                    exit;
-                }
-                else
-                {
-                    return;
+                    ob_start();
+                    echo $this->getFile();
+                    $htmlOutput = $cache->setTemplate();
                 }
             }
             else
             {
-                throw new Exception("View File {$this->viewFileName} Dont Exist!");
+                $htmlOutput = $this->getFile();
             }
+
+            echo $htmlOutput;
+            exit;
+        }
+        else
+        {
+            throw new Exception("View File {$this->viewFileName} Dont Exist!");
         }
     }
 
@@ -101,9 +89,6 @@ class BaseView extends stdClass
         $this->layoutFilePath = ROOT . DS . 'application' . DS . 'views' . DS . 'layout' . DS . $file;
     }
 
-    public function isViewEnabled() { return $this->isViewEnabled; }
-    public function enableView() { $this->isViewEnabled = true; }
-    public function disableView() { $this->isViewEnabled = false; }
     public function isViewExist() { return file_exists($this->viewFilePath); }
     public function setView($tpl)
     {

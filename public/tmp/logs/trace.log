@@ -2,3 +2,8 @@
 [2012-11-24 00:11:55] Debug: Cache miss for news.phtml
 [2012-11-24 00:11:56] Debug: Cache hit for template news.phtml
 [2012-11-24 00:11:56] Debug: Cache hit for template news.phtml
+[2012-11-24 00:14:00] Debug: Cache miss for index.phtml
+[2012-11-24 00:15:52] Debug: Cache hit for template index.phtml
+[2012-11-24 00:15:52] Debug: Cache hit for template index.phtml
+[2012-11-24 00:15:53] Debug: Cache hit for template index.phtml
+[2012-11-24 00:15:53] Debug: Cache hit for template index.phtml

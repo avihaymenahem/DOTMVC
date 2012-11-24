@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>DOTMVC - Lightweight Php MVC Framework</title>
+    <link rel="stylesheet" href="http://local.mvc/public/static/css/reset.css?1353716040">
+    <link rel="stylesheet" href="http://local.mvc/public/static/css/master.css?1353716040">
+    <script src="http://local.mvc/public/static/js/jquery.js?1353716040"></script>
+</head>
+<body id="" onload="">
+<div class="mainWrapper">
+    <div class="topGreySquare"></div>
+    <img src="http://local.mvc/public/static/img/dotmvc.png">
+    <hr>
+    index</div>
+</body>
+</html>
