@@ -67,12 +67,4 @@ class Utils
     {
         return BASE_URL . 'public' . DS . 'static' . DS . 'img' . DS . $imagePath;
     }
-
-    public static function minifyHTML($content)
-    {
-        $search = array('/\>[^\S ]+/s','/[^\S ]+\</s','/(\s)+/s');
-        $replace = array('>','<','\\1');
-        $buffer = preg_replace($search, $replace, $content);
-        return $buffer;
-    }
 }

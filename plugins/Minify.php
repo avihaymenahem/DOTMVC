@@ -2,6 +2,15 @@
 
 class Minify
 {
+
+    public static function html($content)
+    {
+        $search = array('/\>[^\S ]+/s','/[^\S ]+\</s','/(\s)+/s');
+        $replace = array('>','<','\\1');
+        $buffer = preg_replace($search, $replace, $content);
+        return $buffer;
+    }
+
     public static function css($files)
     {
         return Minify::compress('css', $files);

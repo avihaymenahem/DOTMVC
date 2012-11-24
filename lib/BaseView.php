@@ -53,7 +53,7 @@ class BaseView extends stdClass
                 $htmlOutput = $this->getFile();
             }
 
-            $htmlOutput = ENABLE_MINIFY ? Utils::minifyHTML($htmlOutput) : $htmlOutput;
+            $htmlOutput = ENABLE_MINIFY ? Minify::html($htmlOutput) : $htmlOutput;
             echo $htmlOutput;
             exit;
         }
