@@ -70,6 +70,8 @@ abstract class BaseController
             $this->params[$this->queryString[$x]] = $this->queryString[$x+1];
             array_shift($this->queryString);
         }
+        $this->params = json_encode($this->params);
+        $this->params = json_decode($this->params);
     }
 
     /**
