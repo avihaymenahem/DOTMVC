@@ -6,11 +6,9 @@ abstract class BaseController
     private $controllerExposed;
     private $action;
     private $queryString;
-    private $displayView = true;
-    private $displayLayout = true;
     private $layoutFile;
-    private $view;
-    private $otherViewFile;
+    /** @var BaseView */
+    public $view;
     public $params;
 
     /**
@@ -28,132 +26,32 @@ abstract class BaseController
         $this->layoutFile = DEFAULT_LAYOUT;
 
         $this->analyzeQueryStringIntoArray($isInitedFromSpecialRoute);
-        $this->initView();
         $this->getControllerAct();
     }
 
 
-    public function getControllerAct()
+    private function getControllerAct()
     {
-
         $action = $this->action . 'Action';
         if(!method_exists($this->controller, $action))
         {
             $action = $this->action = 'indexAction';
         }
 
+        $this->initView();
         $this->onInit();
         $this->{$action}();
-        $this->renderView();
-    }
-
-    private function initView()
-    {
-        $this->view = new stdClass();
-        $this->view->title = DEFAULT_PAGE_TITLE;
-    }
-
-    /**
-     * @param $viewFile
-     */
-    public function setView($viewFile)
-    {
-        if(file_exists(ROOT . DS . 'application' . DS . views . DS . $this->controllerExposed . DS . $viewFile))
-        {
-            $this->otherViewFile = $viewFile;
-        }
     }
 
     /**
      * Render the view from the controller and action chosed
-     * @return mixed
-     * @throws Exception
      */
-    public function renderView()
+    public function initView()
     {
-        if($this->displayView)
-        {
-            $viewPath = ROOT . DS . 'application' . DS . 'views' . DS . $this->controllerExposed. DS;
-            $viewFile = isset($this->otherViewFile) ? $this->otherViewFile : $this->action . '.phtml';
-            $yield = $viewPath . $viewFile;
-
-            if(file_exists($yield))
-            {
-                $layoutPath = ROOT . DS . 'application' . DS . 'views' . DS . 'layout' . DS . $this->layoutFile;
-                if($this->displayLayout)
-                {
-                    if(file_exists($layoutPath))
-                    {
-                        if(CACHE_ENABLED)
-                        {
-                            $cache = Cache::getInstance($viewFile, $this->controllerExposed);
-                            $cache->init();
-                            require_once($layoutPath);
-                            $cache->setTemplate();
-                        }
-                        else
-                        {
-                            require_once($layoutPath);
-                        }
-                    }
-                    else
-                    {
-                        throw new Exception("Layout File " . $this->layoutFile . " Has Not Found");
-                    }
-                }
-                else
-                {
-                    if(CACHE_ENABLED)
-                    {
-                        $cache = Cache::getInstance($viewFile, $this->controllerExposed);
-                        $cache->init();
-                        require_once($yield);
-                        $cache->setTemplate();
-                    }
-                    else
-                    {
-                        require_once($yield);
-                    }
-                }
-            }
-            else
-            {
-                throw new Exception("No View File Found In: " . $yield);
-            }
-        }
-    }
-
-    /**
-     * Disable view - for functions that procces information only
-     */
-    public function disableView()
-    {
-        $this->displayView = false;
-    }
-
-    /**
-     * Enable view - DEFAULT
-     */
-    public function enableView()
-    {
-        $this->displayView = true;
-    }
-
-    /**
-     * Set other layout then the default one
-     * @param $layout - File Name
-     */
-    public function setLayout($layout)
-    {
-        $this->layoutFile = $layout;
-    }
-
-    /**
-     * Disable layout on current view
-     */
-    public function disableLayout()
-    {
-        $this->displayLayout = false;
+        $this->view = BaseView::getInstance();
+        $this->view->setTitle(DEFAULT_PAGE_TITLE);
+        $this->view->setController($this->controllerExposed);
+        $this->view->setView($this->action . '.phtml');
     }
 
     /**
@@ -183,19 +81,12 @@ abstract class BaseController
     }
 
     /**
-     * Set View's Title
-     * @param $str
-     */
-    public function setTitle($str)
-    {
-        $this->view->title = $str;
-    }
-
-    /**
      * Runs this function before calling to action on controller
      */
-    public function onInit()
-    {
+    public function onInit() {}
 
+    public function assign($key, $value)
+    {
+        $this->view->{$key} = $value;
     }
 }

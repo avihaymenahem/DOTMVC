@@ -17,6 +17,7 @@ class IndexController extends BaseController
 
     public function newsAction()
     {
-
+        $this->view->assign("name", "avihay");
+        $this->view->render();
     }
 }

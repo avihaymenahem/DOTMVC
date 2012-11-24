@@ -27,16 +27,9 @@ class Cache
         $this->cacheTime = defined('CACHE_TIME') ? CACHE_TIME : 1200;
         $this->cacheDir = ROOT . DS . 'public' . DS . 'tmp' . DS . 'cache' . DS;
         $this->fileEXT = '.tmp';
-
         $this->fileName = $file;
         $this->controllerPrefix = $controller;
         $this->cacheFilePath = $this->cacheDir . md5($this->fileName) . '_' . $this->controllerPrefix . '_' . str_replace(".phtml", "", $this->fileName) . $this->fileEXT;
-    }
-
-    public function init()
-    {
-        $this->getTemplate();
-        ob_start();
     }
 
     public function isExist()
@@ -50,8 +43,11 @@ class Cache
         {
             Trace::debug("Cache hit for template {$this->fileName}");
             $content = file_get_contents($this->cacheFilePath);
-            echo $content;
-            exit;
+            return $content;
+        }
+        else
+        {
+            return false;
         }
     }
 
@@ -67,6 +63,7 @@ class Cache
         $fh = fopen($this->cacheFilePath, 'w');
         fwrite($fh, $content);
         fclose($fh);
-        ob_end_flush();
+        ob_end_clean();
+        return $content;
     }
 }
